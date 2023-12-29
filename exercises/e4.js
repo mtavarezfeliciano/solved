@@ -9,9 +9,12 @@
  * splitFirstAndLastNames('John Smith') => ['John', 'Smith']
  */
 
-function splitFirstAndLastNames(str) {
-  return str.split(' ');
-}
+// function splitFirstAndLastNames(str) {
+//   return str.split(' ');
+// }
+let splitFirstAndLastNames = (str) => str.split(' ');
+splitFirstAndLastNames('John Smith');
+
 
 
 /** =========================
@@ -20,10 +23,12 @@ function splitFirstAndLastNames(str) {
  * personAge({ id: 1, name: 'Someone', age: 32}) => 32
  */
 
-const personAge = function(personObject) {
-  return personObject.age;
-}
+// const personAge = function(personObject) {
+//   return personObject.age;
+// }
 
+let personAge = (personObject) => personObject.age;
+personAge({id: 1, name: 'Someone', age: 32});
 
 /** =========================
  * The isNameInArray function takes an array and string of name as the arguments.
@@ -32,9 +37,18 @@ const personAge = function(personObject) {
  * isNameInArray(['Jon', 'Michael', 'Andrey'], 'James') => false;
  */
 
-const isNameInArray = function(arr, name) {
-  return arr.includes(name);
+// const isNameInArray = function(arr, name) {
+//   return arr.includes(name);
+// }
+
+let isNameInArray = (arr, name) => {
+  if (arr.includes(name)) { 
+    return true;
+  }
+  return false;
 }
+isNameInArray(['Jon', 'Michael', 'Andrey'], 'Michael');
+isNameInArray(['Jon', 'Michael', 'Andrey'], 'James');
 
 
 /** =========================
@@ -44,9 +58,21 @@ const isNameInArray = function(arr, name) {
  * !!! Hint: There are two functions to refactor !!!
  */
 
-const logSecondsUpToMax = function(max) {
+// const logSecondsUpToMax = function(max) {
+//   let i = 0;
+//   const timer = setInterval(function() {
+//     if (i < max) {
+//       console.log(++i);
+//     } else {
+//       clearInterval(timer);
+//     }
+//   }, 1000);
+// }
+
+
+let logSecondsUpToMax = (max) => {
   let i = 0;
-  const timer = setInterval(function() {
+  let timer = setInterval(() => {
     if (i < max) {
       console.log(++i);
     } else {
@@ -54,7 +80,6 @@ const logSecondsUpToMax = function(max) {
     }
   }, 1000);
 }
-
 
 
 // === TEST YOURSELF ===
