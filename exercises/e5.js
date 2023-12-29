@@ -1,8 +1,7 @@
-// In this exercise you'll complete a series of "comparison" mini exercises. 
-// Conditional logic is a huge part of coding. It's what helps a program make decisions. 
+// In this exercise you'll complete a series of "comparison" mini exercises.
+// Conditional logic is a huge part of coding. It's what helps a program make decisions.
 // Finish each exercise below.
 // You can use ANY type of function syntax you want: named, arrow, or expression with anonymous function.
-
 
 /** =========================
  * Create a getDiffTwentySeven(num) function to return the difference between a given number and 27
@@ -13,8 +12,15 @@
 
 // Your code goes here...
 
-
-
+let getDiffTwentySeven = (num) => {
+  if (num < 27) {
+    return 27 - num;
+  } else {
+    return (num - 27) * 2;
+  }
+};
+getDiffTwentySeven(13);
+getDiffTwentySeven(37);
 
 /** =========================
  * Create a sumOfTwoIntegers(num1, num2) function to compute and return the sum of the two given integers
@@ -25,8 +31,17 @@
 
 // Your code goes here
 
+let sumOfTwoIntegers = (num1, num2) => {
+  let sum = num1 + num2;
 
-
+  if (num1 == num2) {
+    return 3 * sum;
+  } else {
+    return sum;
+  }
+};
+sumOfTwoIntegers(13, 14);
+sumOfTwoIntegers(12, 12);
 
 /** =========================
  * Create a isOneOfThemOrTheirSumIsFourty(num1, num2) function to check two given numbers and return a boolean.
@@ -39,19 +54,26 @@
 
 // Your code goes here...
 
-
-
+let isOneOfThemOrTheirSumIsFourty = (num1, num2) => {
+  if (num1 === 40 || num2 === 40 || (num1 + num2 === 40)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+isOneOfThemOrTheirSumIsFourty(40, 13);
+isOneOfThemOrTheirSumIsFourty(22, 18);
+isOneOfThemOrTheirSumIsFourty(23, 16);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-5"
 // If the test has all tests passed, switch to the next exercise file
 // If any of the tests fails, refactor the code and run the test command after you've fixed the function
 
-
 // Do not delete or change the lines beneath
 const f = {
   getDiffTwentySeven: getDiffTwentySeven || undefined,
   sumOfTwoIntegers: sumOfTwoIntegers || undefined,
   isOneOfThemOrTheirSumIsFourty: isOneOfThemOrTheirSumIsFourty || undefined,
-}
-export { f }
+};
+export { f };
